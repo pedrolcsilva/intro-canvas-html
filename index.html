@@ -1,0 +1,321 @@
+<DOCTYPE html>
+<html lang="pt_BR">
+
+  <head>
+    <title>Minha primeira SVG</title>
+	<meta charset="utf-8" />
+
+  </head>
+  
+  <style>
+	body{
+	  text-align: center;
+	  font-family: Trebuchet MS;
+	}
+  
+  </style>
+  
+  <body >
+  
+    <h1>
+	Canvas Criado Por Mim
+	</h1>
+	
+  
+	<p>
+	Site para estudo do elemento 'canvas'
+	</p> 
+	
+	<canvas id="desenho" width="450" height="400" >
+	
+	
+	</canvas>
+	
+  </body>
+  
+  <script>
+    const desenho = document.getElementById('desenho');
+	const draw = desenho.getContext('2d');
+	
+	<!--draw.fillStyle = 'white';-->
+    <!--draw.beginPath();-->
+    <!--draw.moveTo(6, 0);-->
+    <!--draw.lineTo(4.8,3);-->
+    <!--draw.lineTo(2.4,3);-->
+	<!--draw.lineTo(4.2,5.4);-->
+	<!--draw.lineTo(3,8.1);-->
+	<!--draw.lineTo(6,6.3);-->
+	<!--draw.lineTo(9,8.1);-->
+	<!--draw.lineTo(7.8,5.4);-->
+	<!--draw.lineTo(9.6,3);-->
+	<!--draw.lineTo(7.2,3);-->
+    <!--draw.closePath();-->
+    <!--draw.fill();-->
+	
+	
+	
+	
+	
+	
+	let count = 0;
+
+	function animate() {
+		
+		requestAnimationFrame(animate);
+		draw.clearRect( 0, 0, 450, 400);
+
+		
+		draw.fillStyle = 'green';
+		draw.fillRect(0, 0, 450, 300);
+
+		draw.fillStyle = 'gold';
+		draw.beginPath();
+		draw.moveTo(30, 150);
+		draw.lineTo(225,30);
+		draw.lineTo(420, 150);
+		draw.lineTo(225, 270);
+		draw.closePath();
+		draw.fill();
+		
+		draw.fillStyle = 'MidnightBlue';
+		draw.beginPath();
+		draw.arc(225, 150, 80, 0, 2 * Math.PI);
+		draw.fill();
+		draw.stroke();
+		
+		<!--Faixa-->
+		draw.fillStyle = 'white';
+		draw.beginPath();
+		draw.arc(200, 250, 140, 4.365, 1.768 * Math.PI);
+		draw.arc(198, 265, 140, 5.55, 3.382 * Math.PI, true);
+		draw.closePath();
+		draw.fill();
+		draw.stroke();
+		
+		<!--Texto-->
+		draw.fillStyle = 'black';
+		draw.font = "30px Arial";
+		draw.fillText("Em Andamento...", 110, 350);
+	
+		
+		
+		draw.beginPath();
+		draw.moveTo(185, 190);
+		draw.lineTo(184,192.5);
+		draw.lineTo(182,192.5);
+		draw.lineTo(183.5,194.5);
+		draw.lineTo(182.5,196.75);
+		draw.lineTo(185,195.25);
+		draw.lineTo(187.5,196.75);
+		draw.lineTo(186.5,194.5);
+		draw.lineTo(188,192.5);
+		draw.lineTo(186,192.5);
+		draw.closePath();
+		draw.fillStyle = '#D3D3D3';
+		
+		if( count <= 1){
+			draw.fillStyle = 'Silver';
+		}
+		else if( count > 1 && count <= 2){
+			draw.fillStyle = 'LightGrey';
+		}else if( count > 2 && count <= 3){
+			draw.fillStyle = 'White';
+		}else if( count > 3 && count <= 4){
+			draw.fillStyle = 'LightGrey';
+		}
+		
+		draw.beginPath();
+		draw.moveTo(191, 180);
+		draw.lineTo(189.8,183);
+		draw.lineTo(187.4,183);
+		draw.lineTo(189.2,185.4);
+		draw.lineTo(188,188.1);
+		draw.lineTo(191,186.7);
+		draw.lineTo(194,188.1);
+		draw.lineTo(192.8,185.4);
+		draw.lineTo(194.6,183);
+		draw.lineTo(192.2,183);
+		draw.closePath();
+		draw.fill();
+		
+		draw.beginPath();
+		draw.moveTo(201, 200);
+		draw.lineTo(199.8,203);
+		draw.lineTo(197.4,203);
+		draw.lineTo(199.2,205.4);
+		draw.lineTo(198,208.1);
+		draw.lineTo(201,206.3);
+		draw.lineTo(204,208.1);
+		draw.lineTo(202.8,205.4);
+		draw.lineTo(204.6,203);
+		draw.lineTo(202.2,203);
+		draw.closePath();
+		draw.fill();
+		
+		draw.beginPath();
+		draw.moveTo(165, 183);
+		draw.lineTo(164,185.5);
+		draw.lineTo(162,185.5);
+		draw.lineTo(163.5,187.5);
+		draw.lineTo(162.5,189.75);
+		draw.lineTo(165,188.25);
+		draw.lineTo(167.5,189.75);
+		draw.lineTo(166.5,187.5);
+		draw.lineTo(168,185.5);
+		draw.lineTo(166,185.5);
+		draw.closePath();
+		draw.fill();
+		
+		draw.beginPath();
+		draw.moveTo(173, 175);
+		draw.lineTo(171.8,178);
+		draw.lineTo(169.4,178);
+		draw.lineTo(171.2,180.4);
+		draw.lineTo(170,183.1);
+		draw.lineTo(173,181.7);
+		draw.lineTo(176,183.1);
+		draw.lineTo(174.8,180.4);
+		draw.lineTo(176.6,178);
+		draw.lineTo(174.2,178);
+		draw.closePath();
+		draw.fill();
+		
+		draw.beginPath();
+		draw.moveTo(166, 138);
+		draw.lineTo(164.8,141);
+		draw.lineTo(162.4,141);
+		draw.lineTo(164.2,143.4);
+		draw.lineTo(163,146.1);
+		draw.lineTo(166,144.7);
+		draw.lineTo(169,146.1);
+		draw.lineTo(167.8,143.4);
+		draw.lineTo(169.6,141);
+		draw.lineTo(167.2,141);
+		draw.closePath();
+		draw.fill();
+		
+		draw.beginPath();
+		draw.moveTo(281, 173);
+		draw.lineTo(279.8,176);
+		draw.lineTo(277.4,176);
+		draw.lineTo(279.2,178.4);
+		draw.lineTo(278,181.1);
+		draw.lineTo(281,179.7);
+		draw.lineTo(284,181.1);
+		draw.lineTo(282.8,178.4);
+		draw.lineTo(284.6,176);
+		draw.lineTo(282.2,176);
+		draw.closePath();
+		draw.fill();
+		
+		draw.beginPath();
+		draw.moveTo(278, 188);
+		draw.lineTo(276.8,191);
+		draw.lineTo(274.4,191);
+		draw.lineTo(276.2,193.4);
+		draw.lineTo(275,196.1);
+		draw.lineTo(278,194.7);
+		draw.lineTo(281,196.1);
+		draw.lineTo(279.8,193.4);
+		draw.lineTo(281.6,191);
+		draw.lineTo(279.2,191);
+		draw.closePath();
+		draw.fill();
+		
+		draw.beginPath();
+		draw.moveTo(293, 175);
+		draw.lineTo(292,177.5);
+		draw.lineTo(290,177.5);
+		draw.lineTo(291.5,179.5);
+		draw.lineTo(290.5,181.75);
+		draw.lineTo(293,180.25);
+		draw.lineTo(295.5,181.75);
+		draw.lineTo(294.5,179.5);
+		draw.lineTo(296,177.5);
+		draw.lineTo(294,177.5);
+		draw.closePath();
+		draw.fill();
+		
+		draw.beginPath();
+		draw.moveTo(228, 158);
+		draw.lineTo(227,160.5);
+		draw.lineTo(225,160.5);
+		draw.lineTo(226.5,162.5);
+		draw.lineTo(225.5,164.75);
+		draw.lineTo(228,163.25);
+		draw.lineTo(230.5,164.75);
+		draw.lineTo(229.5,162.5);
+		draw.lineTo(231,160.5);
+		draw.lineTo(229,160.5);
+		draw.closePath();
+		draw.fill();
+		
+		draw.beginPath();
+		draw.moveTo(228, 185);
+		draw.lineTo(226.8,188);
+		draw.lineTo(224.4,188);
+		draw.lineTo(226.2,190.4);
+		draw.lineTo(225,193.1);
+		draw.lineTo(228,191.7);
+		draw.lineTo(231,193.1);
+		draw.lineTo(229.8,190.4);
+		draw.lineTo(231.6,188);
+		draw.lineTo(229.2,188);
+		draw.closePath();
+		draw.fill();
+		
+		draw.beginPath();
+		draw.moveTo(216, 166);
+		draw.lineTo(215,168.5);
+		draw.lineTo(213,168.5);
+		draw.lineTo(214.5,170.5);
+		draw.lineTo(213.5,172.75);
+		draw.lineTo(216,171.25);
+		draw.lineTo(218.5,172.75);
+		draw.lineTo(217.5,170.5);
+		draw.lineTo(219,168.5);
+		draw.lineTo(217,168.5);
+		draw.closePath();
+		draw.fill();
+		
+		draw.beginPath();
+		draw.moveTo(236, 165);
+		draw.lineTo(235,167.5);
+		draw.lineTo(233,167.5);
+		draw.lineTo(234.5,169.5);
+		draw.lineTo(233.5,171.75);
+		draw.lineTo(236,170.25);
+		draw.lineTo(238.5,171.75);
+		draw.lineTo(237.5,169.5);
+		draw.lineTo(239,167.5);
+		draw.lineTo(237,167.5);
+		draw.closePath();
+		draw.fill();
+		
+		draw.beginPath();
+		draw.moveTo(256, 200);
+		draw.lineTo(255,202.5);
+		draw.lineTo(253,202.5);
+		draw.lineTo(254.5,204.5);
+		draw.lineTo(253.5,206.75);
+		draw.lineTo(256,205.25);
+		draw.lineTo(258.5,206.75);
+		draw.lineTo(257.5,204.5);
+		draw.lineTo(259,202.5);
+		draw.lineTo(257,202.5);
+		draw.closePath();
+		draw.fill();
+		
+
+		if(count >= 4){
+			count = 0;
+		}
+		count = count + 0.06
+	}
+
+	animate()
+	</script>
+	
+	
+  </script>
+</html>
